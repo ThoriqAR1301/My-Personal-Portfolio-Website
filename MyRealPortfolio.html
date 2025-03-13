@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #0f172a;
+        color: white;
+      }
+      .profile-img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        transition: transform 0.5s ease-in-out;
+      }
+      .profile-img:hover {
+        transform: scale(1.15);
+      }
+      button,
+      a.inline-block {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      button:hover,
+      a.inline-block:hover {
+        transform: scale(1.1);
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="flex justify-between items-center p-10 bg-blue-900 fixed top-0 right-0 left-0">
+      <h1 class="text-xl font-bold">Thoriq AR</h1>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#profile" class="hover:text-blue-400">Profile</a></li>
+        <li><a href="#portfolio" class="hover:text-blue-400">Portfolio</a></li>
+        <li><a href="#skills" class="hover:text-blue-400">Skills</a></li>
+        <li><a href="#certification" class="hover:text-blue-400">Certification</a></li>
+        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+      <button class="md:hidden text-xl" onclick="toggleMenu()">☰</button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col p-5 bg-gray-800">
+      <a href="#profile" class="py-2 hover:text-blue-400">Profile</a>
+      <a href="#portfolio" class="py-2 hover:text-blue-400">Portfolio</a>
+      <a href="#skills" class="py-2 hover:text-blue-400">Skills</a>
+      <a href="#certification" class="py-2 hover:text-blue-400">Certification</a>
+      <a href="#contact" class="py-2 hover:text-blue-400">Contact</a>
+    </div>
+
+    <section id="profile" class="p-12 m-20 text-center">
+      <img src="Image/Thoriq (1).jpg" alt="Profile Picture" class="profile-img mx-auto mt-5" />
+      <h2 class="text-3xl font-bold mt-5">Thoriq Azhar Raditya</h2>
+      <p class="text-gray-500 mt-2 font-semibold text-xl">I am a 10th grade student majoring in Software Engineering at SMK Informatika Pesat Bogor</p>
+    </section>
+
+    <section id="portfolio" class="p-12 m-20 text-center">
+      <h2 class="text-3xl font-bold">Project's Portfolio</h2>
+      <div class="grid md:grid-cols-3 gap-5 mt-5">
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <img src="Image/Hasil.jpg" alt="Image Not Found" class="rounded w-50" />
+          <h3 class="text-xl mt-5">Project One</h3>
+          <p class="text-gray-400 mt-2 text-lg font-semibold">Web Company Profile Tech Educa</p>
+          <p class="text-gray-400 text-lg font-semibold">Visual Studio Code</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <img src="Image/Hasil2-2560x1440.jpg" alt="Image Not Found" class="rounded w-50" />
+          <h3 class="text-xl mt-5">Project Two</h3>
+          <p class="text-gray-400 mt-2 text-lg font-semibold">Wedding Invitation</p>
+          <p class="text-gray-400 text-lg font-semibold">Visual Studio Code + Bootstrap</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <img src="Image/Figma-2560x1440.jpg" alt="Image Not Found" class="rounded w-50" />
+          <h3 class="text-xl mt-5">Project Three</h3>
+          <p class="text-gray-400 mt-2 text-lg font-semibold">UI Website Figma</p>
+          <p class="text-gray-400 text-lg font-semibold">Figma</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <img src="Image/Image_Not_Found-2560x1440.png" alt="Image Not Found" class="rounded w-50" />
+          <h3 class="text-xl mt-5">Project Four</h3>
+          <p class="text-gray-400 mt-2 text-lg font-semibold">Hasil Sertikom (Travel Landing Page)</p>
+          <p class="text-gray-400 text-lg font-semibold">Visual Studio Code</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <img src="Image/Image_Not_Found-2560x1440.png" alt="Image Not Found" class="rounded w-50" />
+          <h3 class="text-xl mt-5">Project Five</h3>
+          <p class="text-gray-400 mt-2 text-lg font-semibold">Web Portfolio's Trial</p>
+          <p class="text-gray-400 text-lg font-semibold">Visual Studio Code + Bootstrap</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <img src="Image/Image_Not_Found-2560x1440.png" alt="Image Not Found" class="rounded w-50" />
+          <h3 class="text-xl mt-5">Project Six</h3>
+          <p class="text-gray-400 mt-2 text-lg font-semibold">Web Company Profile's Trial</p>
+          <p class="text-gray-400 text-lg font-semibold">Wordpress + XAMPP Control Panel</p>
+        </div>
+      </div>
+      <a href="https://github.com/ThoriqAR1301" class="inline-block mt-5 px-6 py-3 bg-blue-500 hover:bg-blue-200 text-white hover:text-black font-bold rounded-lg">View Other Projects</a>
+    </section>
+
+    <section id="skills" class="p-12 m-20 text-center">
+      <h2 class="text-3xl font-bold">Skills</h2>
+      <div class="grid mt-5">
+        <div class="skill-item bg-gray-800 p-4 rounded-lg">
+          <p class="text-start mb-1">HTML</p>
+          <div class="w-full bg-gray-700 rounded-full h-5 mb-2">
+            <div class="bg-blue-600 h-5 rounded-full" style="width: 90%"></div>
+          </div>
+          <p class="text-end mb-3">90%</p>
+          <p class="text-start mb-1">CSS</p>
+          <div class="w-full bg-gray-700 rounded-full h-5 mb-2">
+            <div class="bg-blue-600 h-5 rounded-full" style="width: 80%"></div>
+          </div>
+          <p class="text-end mb-3">80%</p>
+          <p class="text-start mb-1">JAVASCRIPT</p>
+          <div class="w-full bg-gray-700 rounded-full h-5 mb-2">
+            <div class="bg-blue-600 h-5 rounded-full" style="width: 70%"></div>
+          </div>
+          <p class="text-end mb-3">70%</p>
+          <p class="text-start mb-1">BOOTSTRAP</p>
+          <div class="w-full bg-gray-700 rounded-full h-5 mb-2">
+            <div class="bg-blue-600 h-5 rounded-full" style="width: 85%"></div>
+          </div>
+          <p class="text-end mb-3">85%</p>
+          <p class="text-start mb-1">TAILWIND</p>
+          <div class="w-full bg-gray-700 rounded-full h-5 mb-2">
+            <div class="bg-blue-600 h-5 rounded-full" style="width: 80%"></div>
+          </div>
+          <p class="text-end mb-3">80%</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="certification" class="p-12 m-20 text-center">
+      <h2 class="text-3xl font-bold">Certification</h2>
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <img src="Image/Sertikom-2560x1440.png" alt="Image Not Found" class="rounded w-50" />
+          <h3 class="text-xl mt-5">Sertikom's Certification</h3>
+          <p class="text-gray-400 mt-2 text-lg font-semibold">Certified by PT. Kreasi Media</p>
+          <p class="text-gray-400 text-lg font-semibold">Modified : Desember 2024</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <img src="Image/Tahfidz-2560x1440.png" alt="Image Not Found" class="rounded w-50" />
+          <h3 class="text-xl mt-5">Tahfidz Al-Qur'an Juz 30</h3>
+          <p class="text-gray-400 mt-2 text-lg font-semibold">Certified By SMK Pesat IT XPRO</p>
+          <p class="text-gray-400 text-lg font-semibold">Modified : March 2025</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <img src="Image/Image_Not_Found-2560x1440.png" alt="Image Not Found" class="rounded w-50" />
+          <h3 class="text-xl mt-5">Still Coming Soon ...</h3>
+          <p class="text-gray-400 mt-2 text-lg font-semibold">Wait For Update 😄😄</p>
+          <p class="text-gray-400 text-lg font-semibold">Modified : -</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="p-12 m-20 text-center">
+      <h2 class="text-3xl font-bold">Contact Me</h2>
+      <form class="mt-6 max-w-xl mx-auto">
+        <input type="text" placeholder="Full Name" class="w-full p-2 mb-4 bg-gray-800 rounded" />
+        <input type="email" placeholder="Email Address" class="w-full p-2 mb-4 bg-gray-800 rounded" />
+        <textarea placeholder="Your Message" class="w-full p-2 mb-4 bg-gray-800 rounded"></textarea>
+        <button class="bg-blue-500 hover:bg-blue-200 text-white hover:text-black font-bold px-4 py-2 rounded">Submit</button>
+      </form>
+    </section>
+
+    <footer class="p-5 bg-gray-900 text-center">
+      <p class="text-gray-500 font-semibold">&copy; 2025 My Personal Portfolio Website By Thoriq X RPL. All Rights Reserved</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      }
+    </script>
+  </body>
+</html>
